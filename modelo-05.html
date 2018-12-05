@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Modelo Estudo 05</title>
+	<link href="https://fonts.googleapis.com/css?family=Lato:500,900,900i" rel="stylesheet"> 
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		body {
+			background: #f5f5f5;
+			color: #2a2e2f;
+			font-size: 16px;
+			font-family: 'Lato', sans-serif;
+			font-weight: 500;
+		}
+		strong {
+			font-weight: 900;
+			text-transform: uppercase;
+		}
+		.container {
+			position: relative;
+			padding-top: 25px;
+			padding-bottom: 25px;			
+		}
+		.poster {
+			display: grid;
+			grid-template-columns: repeat(8, 1fr);
+			grid-template-rows: 2.5fr 1fr 1fr 2fr 2fr auto 3fr 3fr;
+			grid-gap: 15px 0;
+
+			justify-items: center;
+			max-width: 650px;
+			max-height: 918px;
+			height: auto;
+			margin: 0 auto;
+			background: #efe8d6;
+			-webkit-box-shadow: 0px 5px 25px 0px rgba(0,0,0,0.06);
+			-moz-box-shadow: 0px 5px 25px 0px rgba(0,0,0,0.06);
+			box-shadow: 0px 5px 25px 0px rgba(0,0,0,0.06);			
+		}
+
+		.poster__item {
+		}
+
+		.poster__item-01 {
+			grid-column: 5 / 8;
+			grid-row: 1;
+			justify-self: center;
+			align-self: end;
+		}
+		.poster__item-02 {
+			grid-column: 2 / 7;
+			grid-row: 2;
+		}
+		.poster__item-03 {
+			grid-column: 4 / 6;
+			grid-row: 3;
+		}
+		.poster__item-04 {
+			grid-column: 4 / 7;
+			grid-row: 4;
+		}
+		.poster__item-05 {
+			grid-column: 5 / 8;
+			grid-row: 5;
+			justify-self: center;
+		}
+		.poster__item-06 {
+			grid-column: 5 / 8;
+			grid-row: 6;
+			justify-self: center;
+			padding-left: 20px;
+			padding-right: 35px;
+			font-size: .7em;
+			text-align: justify;
+			line-height: 1;
+		}
+		.poster__item-07 {
+			grid-column: 2 / -2;
+			grid-row: 7;
+			align-self: end;
+			font-size: .8em;
+			text-align: justify;
+		}
+
+		.poster__item-08 {
+			grid-column: -2 / -5 ;
+			grid-row: 8;
+			font-size: .8em;
+			text-align: justify;
+		}
+		.poster__item-08 strong {
+			display: block;
+			border-top: 10px solid #2a2e2f;
+			font-size: 4em;
+			font-weight: 900i;
+		}
+		.poster__item-08 span {
+			font-size: 1.5em;
+			font-weight: italic;
+			letter-spacing: 1pt;
+		}
+		/* Notas */
+		.aviso-estudo {
+			position: absolute;
+			bottom: 5px;
+			left: 5px;
+			font-size: .695em;
+			text-shadow: 0 0 2px white;
+		}
+
+		.poster-original {
+			display: none;
+		}
+			
+		@media (min-width: 865px) {
+			.poster-original {
+				display: block;
+				position: absolute;
+				top: 5px;
+				right: 5px;
+				width: 100px;
+			}			
+			.poster-original img {
+				opacity: .4;
+				max-width: 100%;
+				height: auto;
+				position: relative;
+				transition: all .3s ease;
+			}
+			.poster-original img:hover {
+				opacity: 1;
+				transition: all .6s ease;			
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="poster">
+			<div class="poster__item poster__item-01"><img src="images/img-05/img-01.jpg" alt="Imagem ilustrativa"></div>
+			<div class="poster__item poster__item-02"><img src="images/img-05/img-02.jpg" alt="Imagem ilustrativa"></div>
+			<div class="poster__item poster__item-03"><img src="images/img-05/img-03.jpg" alt="Imagem ilustrativa"></div>
+			<div class="poster__item poster__item-04"><img src="images/img-05/img-04.jpg" alt="Imagem ilustrativa"></div>
+			<div class="poster__item poster__item-05"><img src="images/img-05/img-05.jpg" alt="Imagem ilustrativa"></div>
+			<div class="poster__item poster__item-06">
+			 Vestibulum sed mattis enim. Integer vitae mollis lectus, sit amet molestie sapien. Aenean quis felis tortor. Morbi a ex ipsum. Praesent velit est, fermentum ut dictum eu, fermentum non est. Nam eget ipsum nisl.
+			</div>
+			<div class="poster__item-07">
+				<strong>Lorem ipsum dolor sit amet, consectetur adipiscing</strong> elit. Nam volutpat neque et metus pellentesque bibendum. Phasellus ut tincidunt massa. Donec vel mauris dolor. Nam ullamcorper orci non velit pellentesque, vitae pharetra libero tristique. Suspendisse quis erat sit amet felis aliquam semper eget at ex. Curabitur at nulla at massa tincidunt 
+			</div>
+			<div class="poster__item-08">
+				<strong>Martin</strong>
+				<span>Denver Division</span>
+			</div>
+		</div>
+
+
+		<div class="poster-original">
+			<img src="images/modelo-05.jpg" alt="Poster de exemplo para este exercício">
+		</div>
+		<div class="aviso-estudo">
+			Estudo de CSS Grid
+		</div>
+	</div>	
+
+</body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Página de revista 01</title>
+	<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:600,900" rel="stylesheet">
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		body {
+			background: #c8c8c8;
+			font-size: 12px;
+			font-family: 'Nunito Sans', sans-serif;
+			font-weight: 600;
+		}
+		strong {
+			font-weight: 900;
+		}
+		.container {
+			position: relative;
+			padding-top: 25px;
+			padding-bottom: 25px;
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+		}
+		.pagina {
+			display: grid;
+			grid-template-columns: .6fr repeat(4, 3fr) .6fr;
+			grid-template-rows: .4fr repeat(16, .6fr) .4fr;
+			grid-gap: 0;
+			max-width: 600px;
+			min-height: 853px;
+			/* margin: 0 auto; */
+			background: white;
+			color: #2c579c;
+			box-shadow: 0px 5px 25px 0px rgba(0,0,0,0.06);			
+		}
+		.pagina--01 {
+			justify-self: end;
+		}
+
+		.pagina__item-01 {
+			grid-column: 2 / span 2;
+			grid-row: 2 / span 4;
+		}
+		.pagina__item-02 {
+			grid-column: 5;
+			grid-row: 2 / span 2;
+			justify-self: end;
+			font-size: 6em;
+			font-weight: 900;
+			line-height: 1;
+		}
+		.pagina__item-03 {
+			grid-column: 3;
+			grid-row: 8 / span 3;
+			position: relative;
+			/* overflow: hidden; */
+		}
+		.pagina__item-03--texto {
+			position: absolute;
+			top: 0;
+			left: 0;
+			font-size: 5.8em;
+			line-height: 1;
+			white-space: nowrap;
+		}
+		.pagina__item-04 {
+			grid-column: 4 / span 2;
+			grid-row: 12 / span 6;
+		}
+		.pagina__item-05 {
+			grid-column: 2;
+			grid-row: 17;
+			align-self: end;
+		}
+		.pagina__item-06 {
+			grid-column: 4 / span 2;
+			grid-row: 3 / -5;
+		}
+		.pagina__item-07 {
+			grid-column: 4 / span 2;
+			grid-row: 16 / span 2;
+		}
+
+		.pagina__detalhe-01 {
+			grid-column: 1;
+			grid-row: 12;
+			height: 7px;
+			background: #2c579c;
+		}
+
+
+		h1 {
+			margin: 0;
+			padding: 0;
+			/* font-size: 5em; */
+		}
+
+		h2 {
+			margin: 0;
+			padding: 0;
+			line-height: 1;
+		}
+
+		.t-complemento {
+			color: #ffb256;
+		}
+
+		/* Notas */
+		.aviso-estudo {
+			position: absolute;
+			bottom: 5px;
+			left: 5px;
+			font-size: .695em;
+			text-shadow: 0 0 2px white;
+		}
+
+		.pagina-original {
+			display: none;
+		}
+			
+		@media (min-width: 865px) {
+			.pagina-original {
+				display: block;
+				position: absolute;
+				top: 5px;
+				right: 5px;
+				width: 100px;
+			}			
+			.pagina-original img {
+				opacity: .4;
+				max-width: 100%;
+				height: auto;
+				position: relative;
+				transition: all .3s ease;
+			}
+			.pagina-original img:hover {
+				opacity: 1;
+				transition: all .6s ease;			
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="pagina pagina--01">
+			<div class="pagina__item-01">
+				<h2>Definition:</h2>
+				u.ke.le.le <br>
+				<p>(yoo-kuh-ley-lee; Hawalian: oo-koo-ley-ley) <br>
+				 Mauris condimentum, neque non iaculis <br>
+				 Tincidunt, enim enim cursus est.</p><br>
+				 <span class="t-complemento">Ornare fermentum</span>
+			</div>
+			<div class="pagina__item-02">
+				1
+			</div>
+			<div class="pagina__item-03">
+				<div class="pagina__item-03--texto">
+					<h1>-Ukelele</h1>
+				</div>
+			</div>
+			<div class="pagina__item-04">
+				<h2>Construction, Build & Assembly</h2>
+				<br>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis dapibus mauris. Suspendisse faucibus diam sit amet libero posuere sodales. Suspendisse quam metus, luctus condimentum varius eu, lacinia non lectus. Nulla vel mi sed arcu imperdiet ultricies vel quis tortor. Integer quam velit, laoreet eget ipsum id, aliquet elementum enim. Cras varius, eros nec lacinia ultrices, sem nulla tincidunt augue, nec vehicula lectus dui vitae nisi.  Duis in arcu arcu. Nullam ut risus urna. Vestibulum at vulputate justo. </p>
+			</div>
+			<div class="pagina__item-05">
+				01 - Constrution
+			</div>
+			<b class="pagina__detalhe-01"></b>
+		</div>
+
+
+		<div class="pagina pagina--02">
+			<div class="pagina__item-06">
+				<h2>Ukelele Types</h2>
+				<br>
+
+				<p>Morbi pellentesque malesuada commodo. Sed et ex nisi. Maecenas ornare magna at enim vehicula sollicitudin. Vivamus gravida tellus sit amet arcu vulputate, luctus suscipit lacus eleifend. Duis eros ante, rhoncus id tellus sit amet, accumsan convallis libero. Morbi commodo ultricies magna sit amet efficitur. Aenean sit amet ligula ut lectus venenatis elementum.</p>
+				<br>
+				<p>Donec nec finibus sem, sed posuere est. Nulla ornare justo sit amet blandit condimentum. Etiam interdum eros quis pretium ornare. Nam ullamcorper aliquam tellus id ultricies. Etiam cursus, purus eu consequat dapibus, mauris turpis feugiat ipsum, eu consectetur ante erat eu erat. Cras accumsan tortor tellus, vel laoreet magna imperdiet non. Praesent vitae mi vel risus dapibus cursus at venenatis odio. Curabitur eleifend massa sollicitudin euismod pretium. Praesent et feugiat justo, suscipit malesuada tellus. Ut et dui a odio consequat ullamcorper et et urna. Vestibulum dapibus mauris velit, vel eleifend est aliquam ac.</p>
+				<br>
+				<p>Phasellus sit amet lacus bibendum, tincidunt ante ornare, elementum elit. Sed tincidunt augue sed iaculis mattis. Donec aliquet nisi quis fringilla egestas. Suspendisse aliquet hendrerit ornare. Maecenas lobortis, tellus vel congue molestie, risus leo placerat sem, ac tincidunt erat eros eu risus. Praesent placerat posuere leo sit amet aliquet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed semper mauris laoreet, iaculis urna sodales.</p>
+
+			</div>
+			<div class="pagina__item-07">
+				<p class="t-complemento">
+					Vestibulum at vulputate justo. Pellentesque vestibulum nibh in posuere viverra. Fusce non dolor purus. Mauris condimentum, neque non iaculis tincidunt, enim enim cursus est, nec auctor sem enim eu est. Aliquam tempor nunc et ornare fermentum. 
+				</p>
+			</div>
+		</div>
+
+		<div class="pagina-original">
+			<img src="images/pagina-de-revista-01.jpg" alt="pagina de exemplo para este exercício">
+		</div>
+		<div class="aviso-estudo">
+			Estudo de CSS Grid
+		</div>
+	</div>
+</body>
+</html>

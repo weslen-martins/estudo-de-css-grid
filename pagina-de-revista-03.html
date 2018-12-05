@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Página de revista 03</title>
+	<link href="https://fonts.googleapis.com/css?family=Lora:700|Nunito:400,700" rel="stylesheet">
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		body {
+			background: #cecfd1;
+			font-size: 12px;
+			font-family: 'Nunito', sans-serif;
+			font-weight: 600;
+		}
+		strong {
+			font-weight: 900;
+		}
+		.container {
+			position: relative;
+			padding-top: 25px;
+			padding-bottom: 25px;
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+		}
+		.pagina {
+			max-width: 570px;
+			/* min-height: 853px; */
+			/* margin: 0 auto; */
+			background: #f2efea;
+			color: #20201e;
+			box-shadow: 0px 5px 25px 0px rgba(0,0,0,0.06);			
+		}
+		.pagina--01 {
+			display: grid;
+			grid-template-columns: .5fr 1.5fr 6fr 1fr;
+			grid-template-rows: 30px 55px 104px 530px 65px;
+			grid-gap: 0;			
+			justify-self: end;
+		}
+
+		.pagina--02 {
+			display: grid;
+			grid-template-columns: 1fr 6fr 1.5fr .5fr;
+			grid-template-rows: 30px 55px 104px 530px 65px;
+			grid-gap: 0;			
+		}
+
+		.pagina__item-01 {
+			grid-column: 2;
+			grid-row: 2 ;
+			font-size: 3.2em;
+			font-weight: 700;
+			line-height: 1;
+		}
+
+		.pagina__item-02 {
+			grid-column: 3;
+			grid-row: 2;
+			text-transform: uppercase;
+			font-size: .795em;
+			letter-spacing: .3pt;
+		}
+
+		.pagina__item-03 {
+			grid-column: 3;
+			grid-row: 3;
+			text-transform: uppercase;
+			font-size: .795em;
+			letter-spacing: 1pt;
+		}
+
+		.pagina__item-04 {
+			grid-column: 3;
+			grid-row: 4;
+		}
+
+		.pagina__item-05 {
+			grid-column: 1 / 3;
+			grid-row: 3;
+			position: relative;
+		}
+
+		.pagina__item-05--text {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			overflow: hidden;
+			text-indent: -180%;
+		}
+
+		.pagina__item-06 {
+			grid-column: 3 / span 2;
+			grid-row: 3;
+			position: relative;			
+		}
+
+		.pagina__item-06--text {
+			position: absolute;
+			top: 0;
+			right: -40%;
+			width: 100%;
+			text-align: right;
+			overflow: hidden;
+		}
+
+		.pagina__item-07 {
+			grid-column: 3;
+			grid-row: 4;
+			position: relative;
+		}
+
+		.pagina__item-07--text {
+			position: absolute;
+			top: 0%;
+			right: -22%;
+			width: 100%;
+			text-align: right;
+			overflow: hidden;
+		}
+
+		.pagina__item-08 {
+			grid-column: 1 / 3;
+			grid-row: 4;
+			position: relative;
+		}
+
+		.pagina__item-08--text {
+			position: absolute;
+			top: 15%;
+			left: 0;
+			width: 100%;
+			overflow: hidden;
+			text-indent: -40%;
+		}
+
+		.pagina__item-09 {
+			grid-column: 3 / span 2;
+			grid-row: 3;
+			position: relative;
+		}
+
+		.pagina__item-09--text {
+			position: absolute;
+			top: 0%;
+			left: 0;
+			width: 100%;
+			overflow: hidden;
+		}
+
+		.pagina__item-10 {
+			grid-column: 2 / span 3;
+			grid-row: 4;
+			position: relative;
+			overflow: hidden;
+		}
+
+		.pagina__item-10--text {
+			position: absolute;
+			top: 0;
+			right: -15%;
+			width: 100%;
+			text-align: right;
+			overflow: hidden;
+		}
+
+		.pagina__item-11 {
+			grid-column: 2 / span 3;
+			grid-row: 4;
+			position: relative;
+		}
+
+		.pagina__item-11--text {
+			position: absolute;
+			top: 15%;
+			left: 8%;
+			width: 100%;
+			overflow: hidden;
+		}
+
+		.pagina__item-12 {
+			grid-column: 2;
+			grid-row: 4;
+			position: relative;
+
+			display: grid;
+			grid-template-columns: 1fr;
+			grid-template-rows: 4fr 1fr 1fr 4fr;
+		}		
+
+		.pagina__item-12--title {
+			grid-column: 1;
+			grid-row: 2;
+		}
+
+		.pagina__item-12--content {
+			grid-column: 1;
+			grid-row: 4;
+			column-count: 2;
+			text-align: justify;
+		}
+
+		.pagina__item-12--content p:first-child::first-letter {
+  		float: left;
+  		color: #000100;
+  		font-size: 3em;
+  		font-weight: 900;
+  		margin: .3em .2em 0 0;
+		}		
+
+
+		img {
+			-webkit-filter: grayscale(100%);
+		  filter: grayscale(100%);
+		}
+
+		h1 {
+			font-family: 'Lora', serif;
+			font-weight: 700;
+			line-height: 1;
+		}
+
+		h1 {
+			font-size: 6em;
+		}
+
+		h2 {
+			margin: 0;
+			padding-bottom: 0;
+			font-size: 3em;
+			line-height: .9;
+		}
+
+		.t-complemento {
+			margin-top: -30px;
+			font-size: 1.5em;
+			line-height: 1.3;
+		}
+	
+		.img-responsive {
+			max-width: 100%;
+			height: auto;
+			position: relative;
+		}
+
+		/* Notas */
+		.aviso-estudo {
+			position: absolute;
+			bottom: 5px;
+			left: 5px;
+			font-size: .695em;
+			text-shadow: 0 0 2px white;
+		}
+
+		.pagina-original {
+			display: none;
+		}
+			
+		@media (min-width: 865px) {
+			.pagina-original {
+				display: block;
+				position: absolute;
+				top: 5px;
+				right: 5px;
+				width: 100px;
+			}			
+			.pagina-original img {
+				opacity: .4;
+				max-width: 100%;
+				height: auto;
+				position: relative;
+				transition: all .3s ease;
+			}
+			.pagina-original img:hover {
+				opacity: 1;
+				transition: all .6s ease;			
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="pagina pagina--01">
+			<div class="pagina__item-01">
+				03
+			</div>
+			<div class="pagina__item-02">
+				Portrait
+			</div>
+			<div class="pagina__item-03">
+				Text - <br>
+				Lorem ipsum amet <br>
+				<br>
+				Consec - <br> 
+				Tetur adipiscing elit. 
+			</div>
+			<div class="pagina__item-04">
+				<img src="https://picsum.photos/400/560" alt="Imagem de exemplo" class="img-responsive">
+			</div>
+			<div class="pagina__item-05">
+				<div class="pagina__item-05--text">
+					<h1>Stilheden</h1>
+				</div>
+			</div>
+			<div class="pagina__item-06">
+				<div class="pagina__item-06--text">
+					<h1>Stilheden</h1>
+				</div>
+			</div>
+			<div class="pagina__item-07">
+				<div class="pagina__item-07--text">
+					<h1>findes</h1>
+				</div>
+			</div>
+			<div class="pagina__item-08">
+				<div class="pagina__item-08--text">
+					<h1>ikke</h1>
+				</div>
+			</div>
+		</div>
+
+		<!-- ABRE pagina 02 -->
+		<div class="pagina pagina--02">
+			<div class="pagina__item-09">
+				<div class="pagina__item-09--text">
+					<h1>Stilheden</h1>
+				</div>
+			</div>
+
+			<div class="pagina__item-10">
+				<div class="pagina__item-10--text">
+					<h1>findes</h1>
+				</div>
+			</div>
+
+			<div class="pagina__item-11">
+				<div class="pagina__item-11--text">
+					<h1>ikke</h1>
+				</div>
+			</div>
+
+			<div class="pagina__item-12">
+				<div class="pagina__item-12--title">
+					<h2>John Cage <br>& tilfaeldets musik</h2>
+				</div>
+				<div class="pagina__item-12--content">
+					
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eu pharetra arcu, in congue lacus. Vivamus est urna, accumsan in rhoncus ac, pharetra sed lectus. Nunc ullamcorper finibus dui non lobortis. Donec elementum congue lacus, non efficitur diam venenatis at. Nunc gravida interdum justo ut convallis. Vivamus dictum, quam ut sodales vehicula, nulla augue viverra turpis, non pretium mi velit vel quam. Donec mauris lorem, auctor nec ex non, accumsan elementum risus.</p>
+
+					<p>Aliquam imperdiet, sem id aliquet viverra, sapien purus tempor velit, nec posuere turpis nunc vitae nulla. Integer molestie interdum odio, vitae posuere purus tempus in. Duis suscipit commodo magna, ac maximus risus imperdiet ac. Etiam gravida consectetur ultrices. Cras interdum pretium nisl id laoreet. Donec at pulvinar eros. Ut condimentum libero eu faucibus feugiat.</p>				
+					
+				</div>
+			</div>
+		</div>
+
+
+		<div class="pagina-original">
+			<img src="images/pagina-de-revista-03.jpg" alt="pagina de exemplo para este exercício">
+		</div>
+		<div class="aviso-estudo">
+			Estudo de CSS Grid
+		</div>
+	</div>
+</body>
+</html>

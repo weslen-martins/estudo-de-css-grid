@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Modelo Estudo 01</title>
+	<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:700,800" rel="stylesheet"> 
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		body {
+			background: #f8f2ea;
+			font-size:  16px;
+			font-family: 'Nunito Sans', sans-serif;
+			font-weight: 700;
+		}
+		.container {
+			position: relative;
+			padding-top: 25px;
+			padding-bottom: 25px;			
+		}
+		.poster {
+			display: grid;
+			/* grid-template-columns: 1fr 1fr 148px 70px 33px 20px; */
+			grid-template-columns: 1fr 1fr 1fr .45fr .22fr .15fr; 
+			grid-template-rows: 165px 79px 57px 86px 96px 74px 120px 78px auto;
+			grid-gap: 3px;
+			max-width: 600px;
+			height: auto;
+			margin: 0 auto;
+			background: #f8f2ea;
+			-webkit-box-shadow: 0px 5px 25px 0px rgba(0,0,0,0.06);
+			-moz-box-shadow: 0px 5px 25px 0px rgba(0,0,0,0.06);
+			box-shadow: 0px 5px 25px 0px rgba(0,0,0,0.06);			
+		}
+
+		/* Poster content */
+		.poster__item--01 {
+			grid-area: 4 / 1 / 6 / 3;
+			display: grid;
+			grid-template-columns: .43fr .57fr;
+			grid-template-rows: repeat(7, 1fr);
+			grid-gap: 0 6px;
+			z-index: 1;
+		}
+		.poster__nomes--a {
+			align-self: end;
+			justify-self: end;
+			font-size: .875em;
+		}
+		.poster__nomes--b {
+			align-self: end;
+			font-size: 1.5em;
+			font-weight: 700;
+			line-height: .9;
+		}
+
+		.poster__item--02 {
+			grid-area: 8 / 1 / span 1;
+			align-self: start;
+			justify-self: end;
+			font-size: .875em;
+		}
+		.poster__item--03 {
+			grid-area: 7 / 2 / span 3;
+			font-size: .875em;
+		}
+		.poster__item--03 p {
+			margin-bottom: 18px;
+			line-height: 1.07;
+		}
+
+		/* Poster details  */
+		.poster__detalhe {
+			background: #ffad19;
+		}
+		.poster__detalhe--01 {
+			grid-area:  1 / 1 / 7 / 3;
+		}
+ 		.poster__detalhe--02 {
+			grid-area: 3	/ span 1 / span 6;
+		}
+		.poster__detalhe--03 {
+			grid-area: 5 / 4 / -1 / 5;
+		}
+		.poster__detalhe--04 {
+			grid-area: 2 / span 1 / span 6;
+		}
+		.poster__detalhe--05 {
+			grid-area: 1 / span 1 / span 6;
+		}		
+
+		/* Notas */
+		.aviso-estudo {
+			position: absolute;
+			bottom: 5px;
+			left: 5px;
+			font-size: .695em;
+			text-shadow: 0 0 2px white;
+		}
+
+		.poster-original {
+			display: none;
+		}
+			
+		@media (min-width: 865px) {
+			.poster-original {
+				display: block;
+				position: absolute;
+				top: 5px;
+				right: 5px;
+				width: 100px;
+			}			
+			.poster-original img {
+				opacity: .4;
+				max-width: 100%;
+				height: auto;
+				position: relative;
+				transition: all .3s ease;
+			}
+			.poster-original img:hover {
+				opacity: 1;
+				transition: all .6s ease;			
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="poster">
+			<div class="poster__item--01 poster__nomes">
+				<div class="poster__nomes--a">carl</div>
+				<div class="poster__nomes--b">schuricht</div>
+				<div class="poster__nomes--a">maria</div>
+				<div class="poster__nomes--b">stader</div>
+				<div class="poster__nomes--a">katharina</div>
+				<div class="poster__nomes--b">marti</div>
+				<div class="poster__nomes--a">josef</div>
+				<div class="poster__nomes--b">traxel</div>
+				<div class="poster__nomes--a">otto</div>
+				<div class="poster__nomes--b">von rohr</div>
+				<div class="poster__nomes--a"></div>
+				<div class="poster__nomes--b">betthove</div>
+				<div class="poster__nomes--a"></div>
+				<div class="poster__nomes--b">neunte sinfonie</div>
+			</div>
+			<div class="poster__item--02">
+				4.junifestkonzert
+			</div>
+			<div class="poster__item--03">
+				<p>
+					Lorem ipsum <br>
+					1957
+				</p>
+				<p>
+					dolor sit amet, consectetur <br>
+					adipiscing elit <br>
+					vestibulum pretium tur <br>
+					pis <br>
+					lorem, eget convallis <br>
+					nisi mollis amet <br>
+					donec nec sem faucibus <br>
+					porta leo et <br>
+					placerat erat <br>
+					aliquam quis varius <br>
+					i metus, maximus eget <br>
+					elis sed suscipit <br>
+					malesuada ex <br>
+					maecenas pharetra 
+				</p>
+				<p>
+					Sed id magna sodales <br>
+					dictum est sodales <br>
+					pretium ligula.
+				</p>
+			</div>
+			<b class="poster__detalhe poster__detalhe--01"></b> 
+			<b class="poster__detalhe poster__detalhe--02"></b>
+			<b class="poster__detalhe poster__detalhe--03"></b>
+			<b class="poster__detalhe poster__detalhe--04"></b>
+			<b class="poster__detalhe poster__detalhe--05"></b>		
+		</div>
+
+
+		<div class="poster-original">
+			<img src="images/modelo-01.jpg" alt="Poster de exemplo para este exercício">
+		</div>
+		<div class="aviso-estudo">
+			Estudo de CSS Grid
+		</div>
+	</div>	
+
+</body>
+</html>
